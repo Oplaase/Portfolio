@@ -71,6 +71,43 @@ const observer = new IntersectionObserver(
 
 fadeEls.forEach(el => observer.observe(el));
 
+// Synthèse checkboxes – persist state in localStorage
+(function () {
+  const STORAGE_KEY = 'synthese-checks';
+
+  function saveChecks() {
+    const state = {};
+    document.querySelectorAll('.synthese-table input[type="checkbox"]').forEach(cb => {
+      if (cb.checked) state[cb.dataset.id] = true;
+    });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  }
+
+  function loadChecks() {
+    let state = {};
+    try { state = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch (_) {}
+    document.querySelectorAll('.synthese-table input[type="checkbox"]').forEach(cb => {
+      cb.checked = !!state[cb.dataset.id];
+    });
+  }
+
+  loadChecks();
+
+  document.querySelectorAll('.synthese-table input[type="checkbox"]').forEach(cb => {
+    cb.addEventListener('change', saveChecks);
+  });
+
+  const resetBtn = document.getElementById('resetChecks');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      document.querySelectorAll('.synthese-table input[type="checkbox"]').forEach(cb => {
+        cb.checked = false;
+      });
+      localStorage.removeItem(STORAGE_KEY);
+    });
+  }
+})();
+
 // Contact form (UI only)
 const form = document.getElementById('contactForm');
 const feedback = document.getElementById('formFeedback');
