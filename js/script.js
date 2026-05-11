@@ -1,3 +1,30 @@
+// Lightbox
+(function () {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  function open(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.bloc-screenshot').forEach(img => {
+    img.addEventListener('click', () => open(img.src, img.alt));
+  });
+
+  lightboxClose.addEventListener('click', close);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+})();
+
 // Navbar scroll effect
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
@@ -106,6 +133,39 @@ fadeEls.forEach(el => observer.observe(el));
       localStorage.removeItem(STORAGE_KEY);
     });
   }
+})();
+
+// Site preview modal
+(function () {
+  const modal = document.getElementById('siteModal');
+  const modalIframe = document.getElementById('siteModalIframe');
+  const modalUrl = document.getElementById('siteModalUrl');
+  const modalClose = document.getElementById('siteModalClose');
+
+  function openModal(url) {
+    modalIframe.src = url;
+    if (modalUrl) modalUrl.textContent = url.replace('https://', '');
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    modalIframe.src = '';
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.site-preview-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const url = card.dataset.url;
+      if (url) openModal(url);
+    });
+  });
+
+  modalClose.addEventListener('click', closeModal);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
 })();
 
 // Contact form (UI only)
