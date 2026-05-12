@@ -19,7 +19,6 @@
       <li><a href="#apropos">À propos</a></li>
       <li><a href="#competences">Compétences</a></li>
       <li><a href="#synthese">Synthèse des compétences</a></li>
-      <li><a href="#poursuite">Poursuite d'étude</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -235,7 +234,32 @@
           </button>
         </div>
         <div class="bloc-content" id="bloc5-content">
-          <div class="bloc-body"></div>
+          <div class="bloc-body">
+            <div class="bloc-step">
+              <div class="bloc-tags">
+                <span class="tag tag-icon tag-windows">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-13.051-1.949"/>
+                  </svg>
+                  Windows Server 2022
+                </span>
+                <span class="tag tag-icon tag-iis">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="8" rx="2"/>
+                    <rect x="2" y="14" width="20" height="8" rx="2"/>
+                    <line x1="6" y1="6" x2="6.01" y2="6"/>
+                    <line x1="6" y1="18" x2="6.01" y2="18"/>
+                  </svg>
+                  IIS
+                </span>
+              </div>
+              <p>Dans le cadre d'un TP sous Windows Server 2022, j'ai déployé un serveur web IIS afin de mettre à disposition un service Intranet accessible aux utilisateurs du domaine. L'objectif était de créer une page d'accueil accessible à tous ainsi que plusieurs sections réservées à des groupes spécifiques de l'entreprise, comme le service RH et le service Comptabilité.</p>
+              <p>J'ai installé et configuré IIS, créé les différentes applications web puis mis en place une gestion des accès basée sur l'authentification Windows, les groupes Active Directory et les permissions NTFS. J'ai également créé les groupes de sécurité correspondants dans l'Active Directory et associé les utilisateurs aux bons groupes afin de limiter l'accès aux sections sensibles du site.</p>
+              <p>Enfin, j'ai réalisé plusieurs tests d'accès avec différents comptes utilisateurs afin de vérifier le bon fonctionnement du service et la cohérence des autorisations mises en place. Les utilisateurs appartenant au bon groupe pouvaient accéder aux sections autorisées tandis que les autres utilisateurs étaient bloqués par une demande d'authentification.</p>
+              <img src="assets/images/intranet.png" alt="Page d'accueil de l'intranet IIS" class="bloc-screenshot">
+              <img src="assets/images/intranet_connexion.png" alt="Page de connexion de l'intranet IIS" class="bloc-screenshot">
+            </div>
+          </div>
         </div>
       </div>
 
@@ -253,7 +277,52 @@
           </button>
         </div>
         <div class="bloc-content" id="bloc6-content">
-          <div class="bloc-body"></div>
+          <div class="bloc-body">
+            <div class="bloc-step">
+              <h4 class="bloc-subtitle">Veille technologique</h4>
+              <div class="veille-grid">
+
+                <a href="https://www.ssi.gouv.fr/" target="_blank" rel="noopener noreferrer" class="veille-card veille-card--cyber">
+                  <div class="veille-card-header">
+                    <span class="veille-card-badge">Cybersécurité</span>
+                    <svg class="veille-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6m0 0v6m0-6L10 14"/>
+                    </svg>
+                  </div>
+                  <div class="veille-card-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                  </div>
+                  <h4 class="veille-card-title">Panorama de la cybermenace</h4>
+                  <p class="veille-card-desc">Rapport annuel de l'ANSSI sur l'évolution des menaces cybernétiques : ransomwares, espionnage, attaques d'infrastructure. Indispensable pour comprendre le paysage des risques actuels.</p>
+                  <div class="veille-card-source">ssi.gouv.fr · ANSSI</div>
+                </a>
+
+                <a href="https://www.cloudflare.com/learning/security/glossary/what-is-zero-trust/" target="_blank" rel="noopener noreferrer" class="veille-card veille-card--network">
+                  <div class="veille-card-header">
+                    <span class="veille-card-badge">Systèmes &amp; Réseaux</span>
+                    <svg class="veille-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6m0 0v6m0-6L10 14"/>
+                    </svg>
+                  </div>
+                  <div class="veille-card-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="2" width="20" height="8" rx="2"/>
+                      <rect x="2" y="14" width="20" height="8" rx="2"/>
+                      <line x1="6" y1="6" x2="6.01" y2="6"/>
+                      <line x1="6" y1="18" x2="6.01" y2="18"/>
+                    </svg>
+                  </div>
+                  <h4 class="veille-card-title">Architecture Zero Trust</h4>
+                  <p class="veille-card-desc">Le modèle Zero Trust redéfinit la sécurité réseau : ne jamais faire confiance, toujours vérifier. Un paradigme clé pour sécuriser les infrastructures modernes et les accès distants.</p>
+                  <div class="veille-card-source">cloudflare.com · Cloudflare Learning</div>
+                </a>
+
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
 
@@ -313,7 +382,7 @@
               <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b1l1"><span class="checkmark"></span></label></td>
               <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b1l2"><span class="checkmark"></span></label></td>
               <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b1l3"><span class="checkmark"></span></label></td>
-              <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b1l4"><span class="checkmark"></span></label></td>
+              <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b1l4" checked><span class="checkmark"></span></label></td>
               <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b1l5"><span class="checkmark"></span></label></td>
               <td class="td-indicators">
                 Le recensement du patrimoine informatique est exhaustif et réalisé au moyen d’un outil de
@@ -373,7 +442,7 @@
               <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b3l1"><span class="checkmark"></span></label></td>
               <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b3l2"><span class="checkmark"></span></label></td>
               <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b3l3"><span class="checkmark"></span></label></td>
-              <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b3l4"><span class="checkmark"></span></label></td>
+              <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b3l4" checked><span class="checkmark"></span></label></td>
               <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b3l5"><span class="checkmark"></span></label></td>
               <td class="td-indicators">
                 L’image de l’organisation est conforme aux attentes et valorisée. <br>
@@ -397,7 +466,7 @@
               </td>
               <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b4l1"><span class="checkmark"></span></label></td>
               <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b4l2"><span class="checkmark"></span></label></td>
-              <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b4l3"><span class="checkmark"></span></label></td>
+              <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b4l3" checked><span class="checkmark"></span></label></td>
               <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b4l4"><span class="checkmark"></span></label></td>
               <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b4l5"><span class="checkmark"></span></label></td>
               <td class="td-indicators">
@@ -427,7 +496,7 @@
               <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b5l1"><span class="checkmark"></span></label></td>
               <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b5l2"><span class="checkmark"></span></label></td>
               <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b5l3"><span class="checkmark"></span></label></td>
-              <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b5l4"><span class="checkmark"></span></label></td>
+              <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b5l4" checked><span class="checkmark"></span></label></td>
               <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b5l5"><span class="checkmark"></span></label></td>
               <td class="td-indicators">
                 Des tests pertinents d’intégration et d’acceptation sont rédigés et effectués. <br>
@@ -452,7 +521,7 @@
               </td>
               <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b6l1"><span class="checkmark"></span></label></td>
               <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b6l2"><span class="checkmark"></span></label></td>
-              <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b6l3"><span class="checkmark"></span></label></td>
+              <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b6l3" checked><span class="checkmark"></span></label></td>
               <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b6l4"><span class="checkmark"></span></label></td>
               <td class="td-check"><label class="check-wrap"><input type="checkbox" data-id="b6l5"><span class="checkmark"></span></label></td>
               <td class="td-indicators">
@@ -480,17 +549,44 @@
     </div>
   </section>
 
-  <!-- POURSUITE D'ÉTUDES -->
-  <section class="section section-dark" id="poursuite">
-    <div class="container">
-      <h2 class="section-title">Poursuite d'études</h2>
-    </div>
-  </section>
-
   <!-- CONTACT -->
   <section class="section" id="contact">
     <div class="container">
       <h2 class="section-title">Contact</h2>
+      <div class="contact-grid">
+
+        <a href="mailto:paul.jacquinbruyere@limayrac.fr" class="contact-card">
+          <div class="contact-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M2 7l10 7 10-7"/>
+            </svg>
+          </div>
+          <div class="contact-card-label">E-mail</div>
+          <div class="contact-card-value">paul.jacquinbruyere@limayrac.fr</div>
+        </a>
+
+        <a href="tel:0768685491" class="contact-card">
+          <div class="contact-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.02 2.22 2 2 0 012 .04h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+          </div>
+          <div class="contact-card-label">Téléphone</div>
+          <div class="contact-card-value">07 68 68 54 91</div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/paul-jacquin-bruy%C3%A8re/" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </div>
+          <div class="contact-card-label">LinkedIn</div>
+          <div class="contact-card-value">paul-jacquin-bruyère</div>
+        </a>
+
+      </div>
     </div>
   </section>
 

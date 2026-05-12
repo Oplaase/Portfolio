@@ -111,10 +111,11 @@ fadeEls.forEach(el => observer.observe(el));
   }
 
   function loadChecks() {
-    let state = {};
-    try { state = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch (_) {}
+    const saved = localStorage.getItem(STORAGE_KEY);
+    let state = null;
+    try { state = saved ? JSON.parse(saved) : null; } catch (_) {}
     document.querySelectorAll('.synthese-table input[type="checkbox"]').forEach(cb => {
-      cb.checked = !!state[cb.dataset.id];
+      cb.checked = state ? !!state[cb.dataset.id] : cb.defaultChecked;
     });
   }
 
